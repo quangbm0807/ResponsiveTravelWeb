@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tour trong nước</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+
+<body>
+
+    <div class="container-fluid g-0 position-relative">
+        <img src="IMAGE/bannerNgoaiNuoc.jpg" style="width: 100%; height: auto;" alt="Banner Image" />
+        <div class="overlays"></div>
+        <div class="text-overlay">
+            <h1>Du lịch Nước Ngoài</h1>
+        </div>
+    </div>
+
+    <div class="w-100">
+        <section style="background-color: #eee;">
+            <div class="text-center py-5">
+                <h1 class="mt-4 mb-5"><strong>Châu Âu</strong></h1>
+                <div class="row">
+                    <div class="col-lg-2 mb-4">
+                        <div class="filter-sidebar">
+                            <h5><i class="fa-solid fa-filter"></i> Lọc theo:</h5>
+                            <hr>
+                            <button class="button-submit w-100 mb-3" ng-click="tang()">Tăng dần</button>
+                            <button class="button-submit w-100" ng-click="giam()">Giảm dần</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="row" id="cardContainer1">
+                            <div class="col-12">
+                                <div class="mb-3 mx-auto">
+                                    <div class="d-flex">
+                                        <input type="text" class="form-control" ng-model="searchKeyword"
+                                            placeholder="Nhập dịch vụ cần tìm" ng-change="searchTour()">
+                                        <button class="button-submit btn btn-primary ms-2" style="width: 100px;"
+                                            ng-click="reverseArray()">Tìm
+                                            kiếm</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-4 mb-3" data-aos="fade-up"
+                                data-aos-duration="1000"
+                                ng-repeat="p in filteredProducts = (products | orderBy:sort | filter:  'Châu Âu' | limitTo: 6: (currentPage-1)*6)">
+                                <div class="card">
+                                    <div class="bg-image" data-mdb-ripple-color="light">
+                                        <img ng-src="{{p.image}}" class="w-100" />
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#!">
+                                            <div class="mask">
+                                                <div class="d-flex justify-content-center align-items-center h-100">
+                                                    <h5><span class="badge bg-danger ms-2">Số lượng có hạn</span></h5>
+                                                    <h5><span class="badge bg-success ms-2">Mới</span></h5>
+                                                    <h5><span class="badge bg-primary ms-2">Tiết kiệm</span></h5>
+                                                </div>
+                                            </div>
+                                            <div class="hover-overlay">
+                                                <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);">
+                                                </div>
+                                            </div>
+                                        </a>
+                                        <a href="" class="text-reset" style="text-decoration: none;">
+                                            <h5 class="card-title mb-3">{{p.title}}</h5>
+                                        </a>
+                                        <a href="" class="text-reset" style="text-decoration: none;">
+                                            <p style="color: rgb(236, 194, 6);"><i class="fa-solid fa-star"></i>
+                                                {{p.rating}}</p>
+                                        </a>
+                                        <h6 class="mb-3">{{p.price | currency: '':0}} VNĐ</h6>
+                                        <button class="button-submit align-items-center w-50"><i
+                                                class="fa-solid fa-plane-departure"></i> <a
+                                                style="text-decoration: none; color: #ffffff;"
+                                                href="#!detail/{{p.id}}">Chi tiết</a> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-p">
+                            <a class="page-link" aria-label="Previous" style="color: black; cursor: pointer;"
+                                ng-click="prev()">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-p" ng-class="{active: currentPage === 1}">
+                            <a class="page-link" style="color: black; cursor: pointer;" ng-click="goToPage(1)">1</a>
+                        </li>
+                        <li class="page-p" ng-class="{active: currentPage === 2}">
+                            <a class="page-link" style="color: black; cursor: pointer;" ng-click="goToPage(2)">2</a>
+                        </li>
+                        <li class="page-p" ng-class="{active: currentPage === 3}">
+                            <a class="page-link" style="color: black; cursor: pointer;" ng-click="goToPage(3)">3</a>
+                        </li>
+
+                        <li class="page-p">
+                            <a class="page-link" aria-label="Next" style="color: black; cursor: pointer;"
+                                ng-click="next()">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-danger btn-floating btn-lg"
+        id="btn-back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+</body>
+
+</html>

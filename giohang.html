@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en" ng-app="myapp">
+
+<head>
+    <title>Giỏ hàng</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+    <link rel="stylesheet" href="CSS/giohang.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body ng-controller="cartCtrl">
+    <div class="container-fluid g-0 position-relative">
+        <img src="IMAGE/bannerGioHang.jpg" class="img-fluid rounded-top" alt="Banner Image" />
+        <div class="overlay1"></div>
+        <div class="text-overlay">
+            <h1 class="fw-normal">Du lịch thả ga</h1>
+            <h1 class="fw-normal">Không lo về giá</h1>
+        </div>
+    </div>
+    <div class="container-fluid"
+        style="background-color: #ededed8d; background-position: 50%;background-repeat: no-repeat;background-size: cover;height: auto;overflow: hidden;width: 100%;">
+        <div class="container">
+            <h2 class="text-center m-5 fw-bold" style="color: #FF5B00;">Chuyến đi của bạn</h2>
+            <div class="row" ng-if="cart.length === 0">
+                <div class="col-md-12 text-center">
+                    <h3 class="m-5">Giỏ hàng của bạn đang trống, hãy quay lại chọn lựa các chuyến đi bạn nhé!</h3>
+                </div>
+            </div>
+            <div class="row" ng-if="cart.length > 0">
+                <div class="col-xl-8">
+                    <div class="card border shadow-none" ng-repeat="item in cart">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start border-bottom pb-3">
+                                <div class="me-4">
+                                    <img ng-src="{{item.imageDetail[0]}}" alt="" class="avatar-lg rounded">
+                                </div>
+                                <div class="flex-grow-1 align-self-center overflow-hidden">
+                                    <div>
+                                        <h5 class=""><a href="#" class="text-dark">{{item.title}}</a>
+                                            <span class="float-end">
+                                                <button class="btn" ng-click="removeFromCart(item)"
+                                                    style="margin-right: 10px;">
+                                                    <i class="fa-solid fa-trash fa-l" style="color: #FF5B00;"></i>
+                                                </button>
+                                            </span>
+                                        </h5>
+                                        <p class="text-muted mb-0">
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                            <i class="bx bxs-star text-warning"></i>
+                                        </p>
+                                        <p class="mb-0 mt-1">Thời hạn : <span class="fw-medium">1 ngày</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="mt-3">
+                                            <p class="text-muted mb-2">Giá</p>
+                                            <h5 class="mb-0 mt-2">
+                                                <span class="text-muted me-2">
+                                                    <del class="font-size-16 fw-normal">{{item.pricePre | currency:
+                                                        '':0}}</del>
+                                                </span>{{item.price | currency: '':0}} VNĐ
+                                            </h5>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="mt-3">
+                                            <p class="text-muted mb-2">Số lượng</p>
+                                            <div class="input-group">
+                                                <input type="number" min="1" class="form-control"
+                                                    ng-model="item.quantity">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="mt-3">
+                                            <p class="text-muted mb-2">Tổng cộng</p>
+                                            <h5>{{item.price * item.quantity | currency: '':0}} VNĐ</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row my-4">
+                        <div class="col-sm-6">
+                            <a href="#!ngoainuoc" class="btn btn-link text-muted">
+                                <i class="fa-solid fa-left-long"></i> Quay lại
+                            </a>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="text-sm-end mt-2 mt-sm-0">
+                                <a class="btn btn-checkss" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                                    <i class="fa-solid fa-cart-shopping"></i> Thanh toán
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-4">
+                    <div class="mt-5 mt-lg-0">
+                        <div class="card border shadow-none">
+                            <div class="card-header bg-transparent border-bottom py-3 px-4">
+                                <h5 class="font-size-16 mb-0">Tổng tiền</h5>
+                            </div>
+                            <div class="card-body p-4 pt-2">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <tbody>
+                                            <tr>
+                                                <td>Tạm tính :</td>
+                                                <td class="text-end">{{getTotal() | currency: '':0}} VNĐ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Giảm giá : </td>
+                                                <td class="text-end"> 0 VNĐ</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Vận chuyển :</td>
+                                                <td class="text-end"> 0 VNĐ</td>
+                                            </tr>
+                                            <tr class="bg-light">
+                                                <th>Tổng cộng :</th>
+                                                <td class="text-end">
+                                                    <span class="fw-bold">{{getTotal() | currency: '':0}} VNĐ</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-100" ng-controller="myCtrl">
+        <section style="background-color: #eee;">
+            <div class="text-center py-5">
+                <h2 class="text-center m-5 fw-bold" style="color: #FF5B00;">Có thể bạn sẽ thích</h2>
+
+                <div class="row">
+                    <div class="col-lg-2 mb-4">
+                        <div class="filter-sidebar">
+                            <h5><i class="fa-solid fa-filter"></i> Lọc theo:</h5>
+                            <hr>
+                            <button class="button-submit w-100 mb-3" ng-click="tang()">Tăng dần</button>
+                            <button class="button-submit w-100" ng-click="giam()">Giảm dần</button>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="row" id="cardContainer1">
+                            <div class="col-12"></div>
+                            <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-3" data-aos="fade-up"
+                                data-aos-duration="1000" ng-repeat="p in products | orderBy:sort | filter: 'Châu Âu'">
+                                <div class="card">
+                                    <div class="bg-image" data-mdb-ripple-color="light">
+                                        <img ng-src="{{p.image}}" class="w-100" />
+                                    </div>
+                                    <div class="card-body">
+                                        <a href="#!" class="text-reset" style="text-decoration: none;">
+                                            <h5 class="card-title mb-3">{{p.title}}</h5>
+                                        </a>
+                                        <a href="#!" class="text-reset" style="text-decoration: none;">
+                                            <p style="color: rgb(236, 194, 6);"><i class="fa-solid fa-star"></i>
+                                                {{p.rating}}</p>
+                                        </a>
+                                        <h6 class="mb-3">{{p.price | currency: '':0}} VNĐ</h6>
+                                        <button class="button-submit align-items-center w-50">
+                                            <i class="fa-solid fa-plane-departure"></i>
+                                            <a style="text-decoration: none; color: #ffffff;"
+                                                href="#!detail/{{p.id}}">Chi tiết</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-center">
+                        <li class="page-p">
+                            <a class="page-link" href="#" aria-label="Previous" style="color: black;">
+                                <span aria-hidden="true">&laquo;</span>
+                            </a>
+                        </li>
+                        <li class="page-p active"><a class="page-link" href="#" style="color: black;">1</a></li>
+                        <li class="page-p"><a class="page-link" href="#" style="color: black;">2</a></li>
+                        <li class="page-p"><a class="page-link" href="#" style="color: black;">3</a></li>
+                        <li class="page-p">
+                            <a class="page-link" href="#" aria-label="Next" style="color: black;">
+                                <span aria-hidden="true">&raquo;</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="paymentModalLabel">Thông tin thanh toán</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="registrationForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Tên người nhận</label>
+                            <input type="text" class="form-control" id="name" name="name" ng-model="user.name" required>
+                            <span class="text-danger opacity-75" ng-show="registrationForm.name.$touched && registrationForm.name.$invalid">
+                                Vui lòng nhập họ và tên.
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Địa chỉ</label>
+                            <input type="text" class="form-control" id="address" name="address" ng-model="user.address" required>
+                            <span class="text-danger opacity-75" ng-show="registrationForm.address.$touched && registrationForm.address.$invalid">
+                                Vui lòng nhập địa chỉ.
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Số điện thoại</label>
+                            <input type="tel" class="form-control" id="phone" name="phone" ng-model="user.phone" required>
+                            <span class="text-danger opacity-75" ng-show="registrationForm.phone.$touched && registrationForm.phone.$invalid">
+                                Vui lòng nhập số điện thoại.
+                            </span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="paymentMethod" class="form-label">Phương thức thanh toán</label>
+                            <select class="form-control" id="paymentMethod" ng-model="user.paymentMethod" required>
+                                <option value="creditCard">Thẻ tín dụng</option>
+                                <option value="bankTransfer">Chuyển khoản</option>
+                                <option value="cash">Tiền mặt</option>
+                            </select>
+                        </div>
+                    </form>
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
+                    <button type="button" class="btn" style="color: #eee; background-color: #FF5B00;">Thanh
+                        toán</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    <script src="JS/index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
