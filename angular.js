@@ -82,7 +82,7 @@ app.controller('myCtrl', function ($scope, $routeParams, $http, CartService) {
 
     $scope.searchTour = function () {
         $scope.products = $scope.products.filter(function (tour) {
-            return tour.title.toLowerCase().includes($scope.searchKeyword.toLowerCase());
+            return tour.name.toLowerCase().includes($scope.searchKeyword.toLowerCase());
         });
     };
 
