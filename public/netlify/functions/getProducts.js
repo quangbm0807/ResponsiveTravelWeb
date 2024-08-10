@@ -1,9 +1,10 @@
-// netlify/functions/getProducts.js
+// public/netlify/functions/getProducts.js
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event) => {
-    const filePath = path.resolve(__dirname, '../public/products.json');
+    // Đường dẫn đến file JSON trong thư mục public
+    const filePath = path.resolve(__dirname, '../products.json');
     
     try {
         const data = fs.readFileSync(filePath, 'utf8');
