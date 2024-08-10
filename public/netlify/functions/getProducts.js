@@ -3,8 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event) => {
-    // Đường dẫn đến file JSON trong thư mục public
-    const filePath = path.resolve(__dirname, '../products.json');
+    const filePath = path.resolve(__dirname, '../../../products.json');
     
     try {
         const data = fs.readFileSync(filePath, 'utf8');
