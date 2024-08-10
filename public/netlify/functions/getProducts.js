@@ -1,9 +1,9 @@
-// public/netlify/functions/getProducts.js
 const fs = require('fs');
 const path = require('path');
 
 exports.handler = async (event) => {
-    const filePath = path.resolve(__dirname, '../../../products.json');
+    // Đảm bảo rằng đường dẫn đúng và trỏ đến tệp JSON bạn cần
+    const filePath = path.resolve(__dirname, '../../products.json');
     
     try {
         const data = fs.readFileSync(filePath, 'utf8');
@@ -15,6 +15,7 @@ exports.handler = async (event) => {
             },
         };
     } catch (error) {
+        console.error('Error reading file:', error); // Thêm log lỗi để dễ debug
         return {
             statusCode: 500,
             body: JSON.stringify({ error: 'Error reading file' }),

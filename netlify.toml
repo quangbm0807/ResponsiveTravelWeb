@@ -1,4 +1,6 @@
 [build]
-  functions = "public/netlify/functions"  # Thư mục chứa các Netlify Functions                  
+  functions = "public/netlify/functions"  # Thư mục chứa các Netlify Functions
+  publish =                     # Thư mục chứa các tài nguyên tĩnh
+
 [build.environment]
   NODE_VERSION = "18"  # Phiên bản Node.js (tuỳ chọn)
