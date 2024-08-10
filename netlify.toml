@@ -1,11 +1,6 @@
 [build]
-  functions = "public/netlify/functions"  # Đường dẫn đến thư mục chứa các Netlify Functions
-  publish = "public"  # Đường dẫn đến thư mục chứa các tài nguyên tĩnh
+  functions = "public/netlify/functions"  # Thư mục chứa các Netlify Functions
+  publish = "public"  # Thư mục chứa các tài nguyên tĩnh
 
 [build.environment]
-  NODE_VERSION = "14"  # Phiên bản Node.js (nếu cần)
-
-[[redirects]]
-  from = "/api/*"
-  to = "/.netlify/functions/:splat"
-  status = 200
+  NODE_VERSION = "14"
