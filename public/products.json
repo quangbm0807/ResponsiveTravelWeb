@@ -1,0 +1,549 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "image": "IMAGE/saigon1.webp",
+      "title": "Vé xe buýt tham quan",
+      "rating": 4.5,
+      "imageDetail": [
+        "IMAGE/xebuyt1.webp",
+        "IMAGE/xebuyt2.webp",
+        "IMAGE/xebuyt3.webp",
+        "IMAGE/xebuyt4.webp",
+        "IMAGE/xebuyt5.webp",
+        "IMAGE/xebuyt6.webp",
+        "IMAGE/xebuyt7.webp",
+        "IMAGE/xebuyt8.webp",
+        "IMAGE/xebuyt9.webp"
+      ],
+      "pricePre": "500000",
+      "price": "250000",
+      "name": "Sài Gòn",
+      "description": [
+        "Khám phá các điểm tham quan nổi tiếng của thành phố Hồ Chí Minh trong tour xe buýt hai tầng như Dinh Độc Lập, Nhà Thờ Đức Bà, Chợ Bến Thành,Phố Đi Bộ Nguyễn Huệ, Bitexco",
+        "Dịch vụ xe buýt vô cùng tiện lợi khi bạn có thể tùy chọn điểm xuống",
+        "Miễn phí sách hướng dẫn với bản đồ, lịch trình và các điểm tham quan phổ biến",
+        "Hỗ trợ thuyết minh nhiều ngôn ngữ: tiếng Anh, Trung Quốc, Nhật Bản, Hàn Quốc, Pháp, Đức, Nga, Tây Ban Nha và tiếng Việt"
+      ]
+    },
+    {
+      "id": "2",
+      "image": "IMAGE/saigon2.webp",
+      "title": "Vé tham quan Suối Tiên",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/suoitien1.webp",
+        "IMAGE/suoitien2.webp",
+        "IMAGE/suoitien3.webp",
+        "IMAGE/suoitien4.webp",
+        "IMAGE/suoitien5.webp",
+        "IMAGE/suoitien6.webp"
+      ],
+      "pricePre": "500000",
+      "price": "120000",
+      "name": "Sài Gòn",
+      "description": [
+        "Khám phá công viên vui chơi giải trí nổi tiếng với các hoạt động thú vị như đi thuyền, chơi trò chơi, thưởng thức ẩm thực đặc sản.",
+        "Dành cho mọi lứa tuổi, từ trẻ em đến người lớn.",
+        "Giá vé hợp lý, phù hợp cho gia đình và nhóm bạn."
+      ]
+    },
+    {
+      "id": "3",
+      "image": "IMAGE/saigon3.webp",
+      "title": "Vé tham quan Landmark 81",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/landmark1.webp",
+        "IMAGE/landmark2.webp",
+        "IMAGE/landmark3.webp"
+      ],
+      "pricePre": "5000000",
+      "price": "2100000",
+      "name": "Sài Gòn",
+      "description": [
+        "Thưởng ngoạn toàn cảnh thành phố từ tòa tháp cao nhất Việt Nam với tầng 83 và 81, trải nghiệm thang máy tốc độ cao.",
+        "Cơ hội chụp ảnh độc đáo từ tầng 81 với tầm nhìn rộng lớn.",
+        "Trải nghiệm không gian mua sắm và ẩm thực sang trọng tại các tầng cao của tòa nhà."
+      ]
+    },
+    {
+      "id": "4",
+      "image": "IMAGE/saigon4.webp",
+      "title": "Vé tham quan Địa đạo Củ Chi",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/cuchi1.webp",
+        "IMAGE/cuchi2.webp",
+        "IMAGE/cuchi3.webp"
+      ],
+      "pricePre": "500000",
+      "price": "100000",
+      "name": "Sài Gòn",
+      "description": [
+        "Khám phá mạng lưới địa đạo lịch sử, tìm hiểu về cuộc sống dưới lòng đất của người dân Việt Nam trong thời kỳ chiến tranh.",
+        "Tham gia các hoạt động giáo dục về lịch sử và văn hóa.",
+        "Trải nghiệm hành trình mạo hiểm qua hệ thống địa đạo phức tạp."
+      ]
+    },
+    {
+      "id": "5",
+      "image": "IMAGE/saigon8.webp",
+      "title": "Vé tham quan trọn gói",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/trongoi1.webp",
+        "IMAGE/trongoi2.webp",
+        "IMAGE/trongoi3.webp",
+        "IMAGE/trongoi4.webp"
+      ],
+      "pricePre": "1500000",
+      "price": "1000000",
+      "name": "Sài Gòn",
+      "description": [
+        "Trải nghiệm tất cả các điểm tham quan nổi tiếng của thành phố Hồ Chí Minh trong một tour du lịch trọn gói.",
+        "Dành cho du khách muốn khám phá nhiều địa điểm trong một chuyến du lịch ngắn ngày.",
+        "Được hướng dẫn bởi các hướng dẫn viên du lịch chuyên nghiệp và nhiệt tình."
+      ]
+    },
+    {
+      "id": "6",
+      "image": "IMAGE/saigon5.webp",
+      "title": "Vé tham quan Bitexco",
+      "rating": 4.3,
+      "imageDetail": [
+        "IMAGE/bitexco1.webp",
+        "IMAGE/bitexco2.webp",
+        "IMAGE/bitexco3.webp"
+      ],
+      "pricePre": "1200000",
+      "price": "290000",
+      "name": "Sài Gòn",
+      "description": [
+        "Thưởng ngoạn toàn cảnh thành phố Hồ Chí Minh từ tầng 52 của tháp Bitexco, một trong những điểm nhấn kiến trúc đặc biệt của thành phố.",
+        "Cơ hội chụp ảnh độc đáo từ tầng 52 với tầm nhìn bao quát.",
+        "Trải nghiệm không gian mua sắm và ẩm thực sang trọng tại tầng cao nhất của tòa nhà."
+      ]
+    },
+    {
+      "id": "7",
+      "image": "IMAGE/saigon6.webp",
+      "title": "Vé trải nghiệm bắn súng",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/bansung1.webp",
+        "IMAGE/bansung2.webp",
+        "IMAGE/bansung3.webp"
+      ],
+      "price": "300000",
+      "name": "Sài Gòn",
+      "description": [
+        "Trải nghiệm cảm giác mạnh mẽ của việc bắn súng tại một trong những trung tâm bắn súng hàng đầu tại Sài Gòn.",
+        "Sử dụng các loại súng mới nhất và an toàn.",
+        "Hướng dẫn viên chuyên nghiệp sẽ hỗ trợ và giúp bạn trải nghiệm tốt nhất."
+      ]
+    },
+    {
+      "id": "8",
+      "image": "IMAGE/saigon7.webp",
+      "title": "Vé tham quan chợ Bến Thành",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/ben_thanh1.webp",
+        "IMAGE/ben_thanh2.webp",
+        "IMAGE/ben_thanh3.webp"
+      ],
+      "price": "2000000",
+      "name": "Sài Gòn",
+      "description": [
+        "Khám phá chợ Bến Thành - trung tâm mua sắm, ẩm thực và văn hóa nổi tiếng của Sài Gòn, với hàng trăm gian hàng bán đủ loại hàng hóa và đặc sản.",
+        "Trải nghiệm ẩm thực đa dạng với các món ăn ngon và đặc sản của đất Sài Gòn.",
+        "Mua sắm các loại hàng hóa từ quần áo, phụ kiện đến đồ điện tử và đồ thủ công mỹ nghệ."
+      ]
+    },
+    {
+      "id": "9",
+      "image": "IMAGE/dangnang1.webp",
+      "title": "Vé cáp treo Bà Nà",
+      "rating": 4.5,
+      "imageDetail": [
+        "IMAGE/bana1.webp",
+        "IMAGE/bana2.webp",
+        "IMAGE/bana3.webp"
+      ],
+      "price": "250000",
+      "name": "Sài Gòn",
+      "description": [
+        "Trải nghiệm cảm giác hồi hộp và tuyệt vời khi lên cáp treo hòa mình vào không gian thiên nhiên tại Bà Nà Hills.",
+        "Thưởng ngoạn toàn cảnh vùng núi xanh mướt và khí hậu mát mẻ của Bà Nà.",
+        "Khám phá các điểm tham quan và hoạt động giải trí tại khu du lịch nổi tiếng này."
+      ]
+    },
+    {
+      "id": "10",
+      "image": "IMAGE/dangnang2.webp",
+      "title": "Vé tham quan Cầu Vàng",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/caovang1.webp",
+        "IMAGE/caovang2.webp",
+        "IMAGE/caovang3.webp"
+      ],
+      "price": "120000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "11",
+      "image": "IMAGE/dangnang3.webp",
+      "title": "Vé tham quan chèo thuyền",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/cheothuyen1.webp",
+        "IMAGE/cheothuyen2.webp",
+        "IMAGE/cheothuyen3.webp"
+      ],
+      "price": "900000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "12",
+      "image": "IMAGE/dangnang4.webp",
+      "title": "Vé tham quan trọn gói Bà Nà",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/trongoibana1.webp",
+        "IMAGE/trongoibana2.webp",
+        "IMAGE/trongoibana3.webp"
+      ],
+      "price": "100000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "13",
+      "image": "IMAGE/dangnang5.webp",
+      "title": "Vé tham quan France Town",
+      "rating": 4.3,
+      "imageDetail": [
+        "IMAGE/francetown1.webp",
+        "IMAGE/francetown2.webp",
+        "IMAGE/francetown3.webp"
+      ],
+      "price": "290000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "14",
+      "image": "IMAGE/dangnang6.webp",
+      "title": "Vé vui chơi giải trí",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/vuichoi1.webp",
+        "IMAGE/vuichoi2.webp",
+        "IMAGE/vuichoi3.webp"
+      ],
+      "price": "300000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "15",
+      "image": "IMAGE/dangnang7.webp",
+      "title": "Vé thưởng thức nhạc hội",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/nhachooi1.webp",
+        "IMAGE/nhachooi2.webp",
+        "IMAGE/nhachooi3.webp"
+      ],
+      "price": "2000000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "16",
+      "image": "IMAGE/dangnang8.webp",
+      "title": "Vé tham quan trọn gói",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/trongoidn1.webp",
+        "IMAGE/trongoidn2.webp",
+        "IMAGE/trongoidn3.webp"
+      ],
+      "price": "1000000",
+      "name": "Sài Gòn"
+    },
+    {
+      "id": "17",
+      "image": "IMAGE/chauau1.webp",
+      "title": "Anh",
+      "rating": 4.5,
+      "imageDetail": [
+        "IMAGE/anh1.webp",
+        "IMAGE/anh2.webp",
+        "IMAGE/anh3.webp",
+        "IMAGE/anh4.webp",
+        "IMAGE/anh5.webp",
+        "IMAGE/anh6.webp",
+        "IMAGE/anh7.webp",
+        "IMAGE/anh8.webp"
+      ],
+      "price": "4000000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "18",
+      "image": "IMAGE/chauau2.webp",
+      "title": "Pháp",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/phap1.webp",
+        "IMAGE/phap2.webp",
+        "IMAGE/phap3.webp",
+        "IMAGE/phap4.webp",
+        "IMAGE/phap5.webp",
+        "IMAGE/phap6.webp",
+        "IMAGE/phap7.webp"
+      ],
+      "price": "2000000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "19",
+      "image": "IMAGE/chauau3.webp",
+      "title": "Hà Lan",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/halan1.webp",
+        "IMAGE/halan2.webp",
+        "IMAGE/halan3.webp",
+        "IMAGE/halan4.webp",
+        "IMAGE/halan5.webp",
+        "IMAGE/halan6.webp",
+        "IMAGE/halan7.webp",
+        "IMAGE/halan8.webp"
+      ],
+      "price": "4500000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "20",
+      "image": "IMAGE/chauau4.webp",
+      "title": "Đức",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/duc1.webp",
+        "IMAGE/duc2.webp",
+        "IMAGE/duc3.webp",
+        "IMAGE/duc4.webp",
+        "IMAGE/duc5.webp"
+      ],
+      "price": "3000000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "21",
+      "image": "IMAGE/chauau5.webp",
+      "title": "Áo",
+      "rating": 4.3,
+      "imageDetail": [
+        "IMAGE/ao1.webp",
+        "IMAGE/ao2.webp",
+        "IMAGE/ao3.webp",
+        "IMAGE/ao4.webp"
+      ],
+      "price": "2900000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "22",
+      "image": "IMAGE/chauau6.webp",
+      "title": "Thụy Sĩ",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/thuysi1.webp",
+        "IMAGE/thuysi2.webp",
+        "IMAGE/thuysi3.webp",
+        "IMAGE/thuysi4.webp",
+        "IMAGE/thuysi5.webp",
+        "IMAGE/thuysi6.webp"
+      ],
+      "price": "7200000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "23",
+      "image": "IMAGE/chauau7.webp",
+      "title": "Ý",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/y1.webp",
+        "IMAGE/y2.webp",
+        "IMAGE/y3.webp",
+        "IMAGE/y4.webp",
+        "IMAGE/y5.webp"
+      ],
+      "price": "4500000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "24",
+      "image": "IMAGE/chauau8.webp",
+      "title": "Tây Ban Nha",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/tbn1.webp",
+        "IMAGE/tbn2.webp",
+        "IMAGE/tbn3.webp",
+        "IMAGE/tbn4.webp",
+        "IMAGE/tbn5.webp",
+        "IMAGE/tbn6.webp",
+        "IMAGE/tbn7.webp"
+      ],
+      "price": "5200000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "25",
+      "image": "IMAGE/chaua1.webp",
+      "title": "Singapore",
+      "rating": 4.8,
+      "imageDetail": [
+        "IMAGE/singapore1.webp",
+        "IMAGE/singapore2.webp",
+        "IMAGE/singapore3.webp",
+        "IMAGE/singapore4.webp",
+        "IMAGE/singapore5.webp"
+      ],
+      "price": "3500000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "26",
+      "image": "IMAGE/chaua1.webp",
+      "title": "Thái Lan",
+      "rating": 4.6,
+      "imageDetail": [
+        "IMAGE/thai1.webp",
+        "IMAGE/thai2.webp",
+        "IMAGE/thai3.webp",
+        "IMAGE/thai4.webp",
+        "IMAGE/thai5.webp"
+      ],
+      "price": "2800000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "27",
+      "image": "IMAGE/chaua2.webp",
+      "title": "Malaysia",
+      "rating": 4.7,
+      "imageDetail": [
+        "IMAGE/malaysia1.webp",
+        "IMAGE/malaysia2.webp",
+        "IMAGE/malaysia3.webp",
+        "IMAGE/malaysia4.webp",
+        "IMAGE/malaysia5.webp",
+        "IMAGE/malaysia6.webp",
+        "IMAGE/malaysia7.webp"
+      ],
+      "price": "3200000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "28",
+      "image": "IMAGE/chaua3.webp",
+      "title": "Indonesia",
+      "rating": 4.5,
+      "imageDetail": [
+        "IMAGE/indonesia1.webp",
+        "IMAGE/indonesia2.webp",
+        "IMAGE/indonesia3.webp",
+        "IMAGE/indonesia4.webp",
+        "IMAGE/indonesia5.webp",
+        "IMAGE/indonesia6.webp",
+        "IMAGE/indonesia7.webp"
+      ],
+      "price": "2700000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "29",
+      "image": "IMAGE/chaua4.webp",
+      "title": "Philippines",
+      "rating": 4.4,
+      "imageDetail": [
+        "IMAGE/philip1.webp",
+        "IMAGE/philip2.webp",
+        "IMAGE/philip3.webp",
+        "IMAGE/philip4.webp",
+        "IMAGE/philip5.webp",
+        "IMAGE/philip6.webp"
+      ],
+      "price": "2900000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "30",
+      "image": "IMAGE/chaua5.webp",
+      "title": "Nhật Bản",
+      "rating": 5,
+      "imageDetail": [
+        "IMAGE/nhatban1.webp",
+        "IMAGE/nhatban2.webp",
+        "IMAGE/nhatban3.webp",
+        "IMAGE/nhatban4.webp",
+        "IMAGE/nhatban5.webp"
+      ],
+      "price": "6000000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "31",
+      "image": "IMAGE/chaua6.webp",
+      "title": "Hàn Quốc",
+      "rating": 4.9,
+      "imageDetail": [
+        "IMAGE/hanquoc1.webp",
+        "IMAGE/hanquoc2.webp",
+        "IMAGE/hanquoc3.webp",
+        "IMAGE/hanquoc4.webp",
+        "IMAGE/hanquoc5.webp"
+      ],
+      "price": "5500000",
+      "name": "Châu Âu"
+    },
+    {
+      "id": "32",
+      "image": "IMAGE/chaua7.webp",
+      "title": "Trung Quốc",
+      "rating": 4.8,
+      "imageDetail": [
+        "IMAGE/trungquoc1.webp",
+        "IMAGE/trungquoc2.webp",
+        "IMAGE/trungquoc3.webp",
+        "IMAGE/trungquoc4.webp",
+        "IMAGE/trungquoc5.webp",
+        "IMAGE/trungquoc6.webp",
+        "IMAGE/trungquoc7.webp"
+      ],
+      "price": "4200000",
+      "name": "Châu Âu"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "BUI MINH QUANG",
+      "phone": "0586495955",
+      "email": "buiminhquang2002@gmail.com",
+      "password": "123",
+      "street": "318 Phan Van Tri",
+      "city": "HO CHI MINH"
+    },
+    {
+      "id": "nextId",
+      "name": "bui minh quang",
+      "phone": "0123456789",
+      "email": "quangbmps28437@fpt.edu.vn",
+      "password": "123456"
+    }
+  ]
+}
