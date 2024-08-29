@@ -70,8 +70,9 @@ app.controller('myCtrl', function ($scope, $routeParams, $http, CartService) {
         $scope.sort = '-price';
     };
 
-    $http.get("http://localhost:3000/products").then(function (response) {
-        $scope.products = response.data;
+    $http.get("https://mp25db509cead87a4cc9.free.beeceptor.com/products").then(function (response) {
+        $scope.products = response.data.products;
+        console.log($scope.products);
         $scope.pageCount = Math.ceil($scope.products.length / $scope.pageSize);
         if ($scope.products.length > 0 && $routeParams.id) {
             $scope.detailPro = $scope.products.find(item => item.id == $routeParams.id);
@@ -131,9 +132,9 @@ app.controller("LoginCtrl", function ($scope, $http, $location, $rootScope) {
     $scope.user = {};
 
     $scope.login = function () {
-        $http.get("http://localhost:3000/users")
+        $http.get("https://mp25db509cead87a4cc9.free.beeceptor.com/users")
             .then(function (response) {
-                var users = response.data;
+                var users = response.data.users;
                 var foundUser = users.find(function (user) {
                     return user.email === $scope.user.email && user.password === $scope.user.password;
                 });
@@ -163,7 +164,7 @@ app.controller('AccountController', function ($scope, $http, $routeParams, $root
     $scope.passwordData = {};
 
     function getUserData() {
-        $http.get('http://localhost:3000/users/' + userId)
+        $http.get('https://mp25db509cead87a4cc9.free.beeceptor.com/users/' + userId)
             .then(function (response) {
                 $scope.user = response.data;
             })
@@ -175,7 +176,7 @@ app.controller('AccountController', function ($scope, $http, $routeParams, $root
     getUserData();
 
     $scope.updateProfile = function () {
-        $http.put('http://localhost:3000/users/' + userId, $scope.user)
+        $http.put('https://mp25db509cead87a4cc9.free.beeceptor.com/users/' + userId, $scope.user)
             .then(function (response) {
                 alert('Cập nhật thông tin thành công!');
                 $route.reload();
@@ -192,7 +193,7 @@ app.controller('AccountController', function ($scope, $http, $routeParams, $root
             return;
         }
 
-        $http.get('http://localhost:3000/users/' + userId)
+        $http.get('https://mp25db509cead87a4cc9.free.beeceptor.com/users/' + userId)
             .then(function (response) {
                 var user = response.data;
 
@@ -203,7 +204,7 @@ app.controller('AccountController', function ($scope, $http, $routeParams, $root
 
                 user.password = $scope.passwordData.newPassword;
 
-                $http.put('http://localhost:3000/users/' + userId, user)
+                $http.put('https://mp25db509cead87a4cc9.free.beeceptor.com/users/' + userId, user)
                     .then(function (response) {
                         alert('Đổi mật khẩu thành công!');
                         $scope.passwordData = {};
@@ -238,7 +239,7 @@ app.controller('AccountController', function ($scope, $http, $routeParams, $root
 app.controller("registerCtrl", function ($scope, $http) {
     $scope.users = [];
     function getUsers() {
-        $http.get("http://localhost:3000/users")
+        $http.get("https://mp25db509cead87a4cc9.free.beeceptor.com/users")
             .then(function (response) {
                 $scope.users = response.data;
             }, function (error) {
@@ -280,7 +281,7 @@ app.controller("registerCtrl", function ($scope, $http) {
         var nextId = $scope.users.length + 1;
         $scope.user.id = "nextId";
 
-        $http.post("http://localhost:3000/users", $scope.user).then(function (response) {
+        $http.post("https://mp25db509cead87a4cc9.free.beeceptor.com/users", $scope.user).then(function (response) {
             $scope.user = {};
             $scope.confirmPassword = '';
             alert("Đăng ký thành công!");

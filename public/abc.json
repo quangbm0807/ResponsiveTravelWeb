@@ -1,0 +1,21 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "image": "IMAGE/image1.jpg",
+        "title": "Example Product",
+        "rating": 4.5,
+        "imageDetail": [
+          "IMAGE/detail1.jpg",
+          "IMAGE/detail2.jpg"
+        ],
+        "price": "100000",
+        "name": "Example Location",
+        "description": [
+          "Description line 1",
+          "Description line 2"
+        ]
+      }
+    ]
+  }
+  
